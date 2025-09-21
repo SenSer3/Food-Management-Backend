@@ -17,11 +17,11 @@ router = APIRouter()
 logger = logging.getLogger("uvicorn.error")
 
 # Load the food alternative model
-food_model = FoodAlternativeModel('Backend/database/nutrition_data.csv')
+food_model = FoodAlternativeModel('database/nutrition_data.csv')
 
 # Load the waste prediction model
 try:
-    waste_prediction_model = WastePredictionModel('Backend/model/best_lasso_model.joblib', 'Backend/model/lasso_preprocessor.joblib')
+    waste_prediction_model = WastePredictionModel('model/best_lasso_model.joblib', 'model/lasso_preprocessor.joblib')
     if not hasattr(waste_prediction_model, 'lasso_model_path'):
         raise ValueError("Model initialization failed - missing lasso_model_path")
 except Exception as e:
