@@ -1,0 +1,17 @@
+# Ignore Python bytecode cache directories
+__pycache__/
+*.pyc
+
+# Ignore pytest cache directory
+.pytest_cache/
+
+# Roadmap files
+supabase.txt
+analysis_plan.txt
+roadmap.txt
+
+test_all_endpoints.py
+test_all_endpoints_updated.py
+test_endpoints.py
+test_prediction.py
+
